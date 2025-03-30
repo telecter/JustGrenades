@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "justgrenades",
+	"version": "${version}",
+	"name": "JustGrenades",
+	"description": "A tiny, but explosive, mod.",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/justgrenades/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"xyz.telecter.justgrenades.JustGrenades"
+		],
+		"client": [
+			"xyz.telecter.justgrenades.JustGrenadesClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
