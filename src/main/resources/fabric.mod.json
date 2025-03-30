@@ -5,13 +5,13 @@
 	"name": "JustGrenades",
 	"description": "A tiny, but explosive, mod.",
 	"authors": [
-		"Me!"
+		"telecter"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/telecter/JustGrenades",
+		"sources": "https://github.com/telecter/JustGrenades"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/justgrenades/icon.png",
 	"environment": "*",
 	"entrypoints": {
