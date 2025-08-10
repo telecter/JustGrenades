@@ -1,31 +1,25 @@
 {
-	"schemaVersion": 1,
-	"id": "justgrenades",
-	"version": "1.0.0",
-	"name": "JustGrenades",
-	"description": "A tiny, but explosive, mod.",
-	"authors": [
-		"telecter"
-	],
-	"contact": {
-		"homepage": "https://github.com/telecter/JustGrenades",
-		"sources": "https://github.com/telecter/JustGrenades"
-	},
-	"license": "MIT",
-	"icon": "assets/justgrenades/icon.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"xyz.telecter.justgrenades.JustGrenades"
-		],
-		"client": [
-			"xyz.telecter.justgrenades.JustGrenadesClient"
-		]
-	},
-	"depends": {
-		"fabricloader": ">=0.16.10",
-		"minecraft": ["1.21.5", "1.21.6", "1.21.7"],
-		"java": ">=21",
-		"fabric-api": "*"
-	}
+  "schemaVersion": 1,
+  "id": "justgrenades",
+  "version": "1.0.0",
+  "name": "JustGrenades",
+  "description": "A tiny, but explosive, mod.",
+  "authors": ["telecter"],
+  "contact": {
+    "homepage": "https://github.com/telecter/JustGrenades",
+    "sources": "https://github.com/telecter/JustGrenades"
+  },
+  "license": "MIT",
+  "icon": "assets/justgrenades/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["xyz.telecter.justgrenades.JustGrenades"],
+    "client": ["xyz.telecter.justgrenades.JustGrenadesClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "minecraft": ">=1.21.5",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
 }

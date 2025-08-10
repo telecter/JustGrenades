@@ -9,7 +9,6 @@ public class JustGrenadesClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		EntityRendererRegistry.register(
-				ModEntityType.GRENADE, FlyingItemEntityRenderer::new
-		);
+				ModEntityType.GRENADE, FlyingItemEntityRenderer::new);
 	}
 }
