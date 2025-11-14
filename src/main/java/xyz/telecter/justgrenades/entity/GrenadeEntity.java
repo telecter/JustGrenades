@@ -21,12 +21,10 @@ public class GrenadeEntity extends ThrownItemEntity {
 
     @Override
     protected void onBlockCollision(BlockState state) {
-        super.onBlockCollision(state);
-        if (this.getWorld() instanceof ServerWorld serverWorld) {
-            serverWorld.createExplosion(this, this.getX(), this.getY(), this.getZ(), 3f, true,
+        if (this.getEntityWorld() instanceof ServerWorld serverWorld) {
+            serverWorld.createExplosion(this, this.getX(), this.getY()+1, this.getZ(), 3f, false,
                     World.ExplosionSourceType.TNT);
             this.kill(serverWorld);
-
         }
     }
 }

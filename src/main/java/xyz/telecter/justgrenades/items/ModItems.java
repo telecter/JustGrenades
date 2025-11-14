@@ -9,6 +9,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import xyz.telecter.justgrenades.JustGrenades;
+import xyz.telecter.justgrenades.entity.ModEntityType;
 
 import java.util.function.Function;
 
@@ -23,11 +24,14 @@ public class ModItems {
         Item item = factory.apply(settings.registryKey(itemKey));
         Registry.register(Registries.ITEM, itemKey, item);
         return item;
-
-
     }
 
-    public static final Item GRENADE = register("grenade", GrenadeItem::new, new Item.Settings()
+    public static final Item GRENADE = register("grenade", (settings) -> new GrenadeItem(ModEntityType.GRENADE, settings), new Item.Settings()
             .useCooldown(2)
+            .maxCount(16)
         );
+    public static final Item SMOKE_GRENADE = register("smoke_grenade", (settings) -> new GrenadeItem(ModEntityType.SMOKE_GRENADE, settings), new Item.Settings()
+            .useCooldown(2)
+            .maxCount(16)
+    );
 }

@@ -8,9 +8,9 @@
   ],
   "key": {
     "I": "minecraft:iron_ingot",
-    "G": "minecraft:tnt"
+    "G": "minecraft:gunpowder"
   },
   "result": {
-    "id": "justgrenades:grenade"
+    "id": "justgrenades:smoke_grenade"
   }
 }

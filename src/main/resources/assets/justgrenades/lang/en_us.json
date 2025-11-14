@@ -1,4 +1,6 @@
 {
   "item.justgrenades.grenade": "Grenade",
-  "entity.justgrenades.grenade": "Grenade"
+  "entity.justgrenades.grenade": "Grenade",
+  "entity.justgrenades.smoke_grenade": "Smoke Grenade",
+  "item.justgrenades.smoke_grenade": "Smoke Grenade"
 }
