@@ -16,7 +16,10 @@ import java.util.function.Function;
 public class ModItems {
     public static void initialize() {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT)
-                .register(itemGroup -> itemGroup.add(GRENADE));
+                .register(itemGroup -> {
+                    itemGroup.add(GRENADE);
+                    itemGroup.add(SMOKE_GRENADE);
+                });
     }
 
     public static Item register(String name, Function<Item.Settings, Item> factory, Item.Settings settings) {
