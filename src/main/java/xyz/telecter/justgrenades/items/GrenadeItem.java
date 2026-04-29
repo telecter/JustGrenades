@@ -1,12 +1,13 @@
 package xyz.telecter.justgrenades.items;
 
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
-import net.minecraft.item.Item;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.world.World;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
 import xyz.telecter.justgrenades.entity.GrenadeEntity;
 import xyz.telecter.justgrenades.entity.ModEntityType;
 import xyz.telecter.justgrenades.entity.SmokeGrenadeEntity;
@@ -14,13 +15,13 @@ import xyz.telecter.justgrenades.entity.SmokeGrenadeEntity;
 public class GrenadeItem extends Item {
     private final EntityType<? extends GrenadeEntity> entityType;
 
-    public GrenadeItem(EntityType<? extends GrenadeEntity> entityType, Settings settings) {
+    public GrenadeItem(EntityType<? extends GrenadeEntity> entityType, Properties settings) {
         super(settings);
         this.entityType = entityType;
     }
     @Override
-    public ActionResult use(World world, PlayerEntity player, Hand hand) {
-        ThrownItemEntity grenade;
+    public InteractionResult use(Level world, Player player, InteractionHand hand) {
+        ThrowableItemProjectile grenade;
 
         if (entityType.equals(ModEntityType.GRENADE)) {
             grenade = new GrenadeEntity(ModEntityType.GRENADE, world);
@@ -28,12 +29,13 @@ public class GrenadeItem extends Item {
             grenade = new SmokeGrenadeEntity(ModEntityType.SMOKE_GRENADE, world);
         }
 
-        grenade.setPosition(player.getEyePos());
-        grenade.setVelocity(player, player.getPitch(), player.getYaw(), 0.0F, 1.0F, 0F);
-        world.spawnEntity(grenade);
+        grenade.setPos(player.getEyePosition());
 
-        player.getStackInHand(hand).decrementUnlessCreative(1, player);
+        grenade.setDeltaMovement(Vec3.directionFromRotation(player.getRotationVector()));
+        world.addFreshEntity(grenade);
 
-        return ActionResult.SUCCESS;
+        player.getMainHandItem().consume(1, player);
+
+        return InteractionResult.SUCCESS;
     }
 }

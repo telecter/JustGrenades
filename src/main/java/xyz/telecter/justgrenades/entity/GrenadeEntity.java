@@ -1,16 +1,17 @@
 package xyz.telecter.justgrenades.entity;
 
-import net.minecraft.block.BlockState;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
-import net.minecraft.item.Item;
-import net.minecraft.server.world.ServerWorld;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
 import xyz.telecter.justgrenades.items.ModItems;
 
-public class GrenadeEntity extends ThrownItemEntity {
+public class GrenadeEntity extends ThrowableItemProjectile {
 
-    public GrenadeEntity(EntityType<? extends ThrownItemEntity> entityType, World world) {
+    public GrenadeEntity(EntityType<? extends ThrowableItemProjectile> entityType, Level world) {
         super(entityType, world);
     }
 
@@ -20,10 +21,10 @@ public class GrenadeEntity extends ThrownItemEntity {
     }
 
     @Override
-    protected void onBlockCollision(BlockState state) {
-        if (this.getEntityWorld() instanceof ServerWorld serverWorld) {
-            serverWorld.createExplosion(this, this.getX(), this.getY()+1, this.getZ(), 3f, false,
-                    World.ExplosionSourceType.TNT);
+    public void onInsideBlock(BlockState state) {
+        if (this.level() instanceof ServerLevel serverWorld) {
+            serverWorld.explode(this, this.getX(), this.getY()+1, this.getZ(), 3f, false,
+                    Level.ExplosionInteraction.TNT);
             this.kill(serverWorld);
         }
     }
