@@ -1,4 +1,4 @@
-package xyz.telecter.justgrenades.entity;
+package net.telecter.justgrenades.entity;
 
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.resources.Identifier;
@@ -14,7 +14,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
-import xyz.telecter.justgrenades.items.ModItems;
+import net.telecter.justgrenades.items.ModItems;
 
 import java.util.List;
 

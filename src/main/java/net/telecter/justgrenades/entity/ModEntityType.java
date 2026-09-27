@@ -1,4 +1,4 @@
-package xyz.telecter.justgrenades.entity;
+package net.telecter.justgrenades.entity;
 
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -7,7 +7,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
-import xyz.telecter.justgrenades.JustGrenades;
+import net.telecter.justgrenades.JustGrenades;
 
 public class ModEntityType {
         public static void initialize() {

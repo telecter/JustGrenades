@@ -1,4 +1,4 @@
-package xyz.telecter.justgrenades.items;
+package net.telecter.justgrenades.items;
 
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -8,9 +8,9 @@ import net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableIt
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
-import xyz.telecter.justgrenades.entity.GrenadeEntity;
-import xyz.telecter.justgrenades.entity.ModEntityType;
-import xyz.telecter.justgrenades.entity.SmokeGrenadeEntity;
+import net.telecter.justgrenades.entity.GrenadeEntity;
+import net.telecter.justgrenades.entity.ModEntityType;
+import net.telecter.justgrenades.entity.SmokeGrenadeEntity;
 
 public class GrenadeItem extends Item {
     private final EntityType<? extends GrenadeEntity> entityType;

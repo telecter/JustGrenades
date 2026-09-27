@@ -1,4 +1,4 @@
-package xyz.telecter.justgrenades.items;
+package net.telecter.justgrenades.items;
 
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
@@ -8,8 +8,8 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTabs;
-import xyz.telecter.justgrenades.JustGrenades;
-import xyz.telecter.justgrenades.entity.ModEntityType;
+import net.telecter.justgrenades.JustGrenades;
+import net.telecter.justgrenades.entity.ModEntityType;
 
 import java.util.function.Function;
 

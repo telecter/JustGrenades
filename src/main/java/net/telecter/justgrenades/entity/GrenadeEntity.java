@@ -1,13 +1,12 @@
-package xyz.telecter.justgrenades.entity;
+package net.telecter.justgrenades.entity;
 
-import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
-import xyz.telecter.justgrenades.items.ModItems;
+import net.telecter.justgrenades.items.ModItems;
 
 public class GrenadeEntity extends ThrowableItemProjectile {
 

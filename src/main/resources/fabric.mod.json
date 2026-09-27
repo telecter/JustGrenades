@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "justgrenades",
-  "version": "2.0.1+mc26.1",
+  "version": "2.0.1+mc26.3",
   "name": "JustGrenades",
   "description": "A tiny, but explosive, mod.",
   "authors": ["telecter"],
@@ -13,12 +13,12 @@
   "icon": "assets/justgrenades/icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": ["xyz.telecter.justgrenades.JustGrenades"],
-    "client": ["xyz.telecter.justgrenades.JustGrenadesClient"]
+    "main": ["net.telecter.justgrenades.JustGrenades"],
+    "client": ["net.telecter.justgrenades.JustGrenadesClient"]
   },
   "depends": {
     "fabricloader": ">=0.16.10",
-    "minecraft": "~26.1",
+    "minecraft": ">=26.3 <26.4",
     "java": ">=21",
     "fabric-api": "*"
   }
